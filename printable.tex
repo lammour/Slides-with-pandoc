@@ -1,0 +1,15 @@
+% from https://wiki.bath.ac.uk/display/latextricks/Making+handouts+from+your+beamer+presentation
+
+\documentclass[a4paper]{article}
+\usepackage{pdfpages}
+
+\makeatletter
+\def\sourc{\jobname}
+\g@addto@macro\sourc{_temp.pdf}
+\makeatother
+
+\begin{document}
+
+\includepdf[pages=1-last,nup=1x2,landscape=false,frame=true,
+            noautoscale=true,scale=1,delta=0mm 5mm]{\sourc}
+\end{document}
