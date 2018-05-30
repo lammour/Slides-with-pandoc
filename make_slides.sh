@@ -10,7 +10,8 @@
 # -o: output file
 # -H: add a code snippet
 
+# Without notes:
 pandoc -s -t beamer -V aspectratio:1610 -H preamble.tex pres.md -o slides.pdf
 
 # With notes:
-# pandoc -s -t beamer -V aspectratio:1610 -H preamble.tex -H display_notes.tex pres.md -o slides_with_notes.pdf
+pandoc -s -t beamer -V aspectratio:1610 -H preamble.tex -H display_notes.tex pres.md -o slides_with_notes.pdf
